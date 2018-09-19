@@ -1,6 +1,11 @@
-function takeANumber(katzDeli, name) {
-  katzDeli.push(name);
-  return "Welcome, " + name + ". You are number " + (katzDeli.indexOf(name) + 1) + " in line.";
+function takeANumber(katzDeli) {
+  if (katzDeli.length < 1 || katzDeli === undefined) {
+    katzDeli.push(1);
+  } else {
+    katzDeli.push(katzDeli.length);
+  }
+  katzDeli.push(' ');
+  return `Welcome!. You are number ${katzDeli.length} in line.`;
 }
 function nowServing(katzDeliLine) {
   if(katzDeliLine.length < 1 || katzDeliLine === undefined) {
